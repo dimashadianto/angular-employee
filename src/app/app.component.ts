@@ -15,15 +15,15 @@ import { CoreService } from './core/core.service';
 export class AppComponent implements OnInit {
   displayedColumns: string[] = [
     'id',
+    'userName',
     'firstName',
     'lastName',
     'email',
     'dob',
-    'gender',
-    'education',
-    'company',
-    'experience',
-    'package',
+    'status',
+    'group',
+    'salary',
+    'description',
     'action',
   ];
   dataSource!: MatTableDataSource<any>;

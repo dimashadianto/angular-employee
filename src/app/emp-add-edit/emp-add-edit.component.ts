@@ -12,12 +12,24 @@ import { EmployeeService } from '../services/employee.service';
 export class EmpAddEditComponent implements OnInit {
   empForm: FormGroup;
 
-  education: string[] = [
-    'Matric',
-    'Diploma',
-    'Intermediate',
-    'Graduate',
-    'Post Graduate',
+  status: string[] =[
+    'Single',
+    'Married',
+    'Widow',
+    'Widower',
+  ];
+
+  group: string[] = [
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
   ];
 
   constructor(
@@ -28,15 +40,15 @@ export class EmpAddEditComponent implements OnInit {
     private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
+      userName: '',
       firstName: '',
       lastName: '',
       email: '',
       dob: '',
-      gender: '',
-      education: '',
-      company: '',
-      experience: '',
-      package: '',
+      status: '',
+      group: '',
+      salary: '',
+      description: '',
     });
   }
 
